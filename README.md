@@ -1,33 +1,32 @@
-# Project
+# CodeQL 101
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+# Setup Instructions
 
-As the maintainer of this project, please make a few updates:
+## Stuff to Download
+ - Install VSCode and git
+ - Install [VSCode extension for CodeQL](https://docs.github.com/en/code-security/codeql-for-vs-code/getting-started-with-codeql-for-vs-code/installing-codeql-for-vs-code)
+ - Download the latest [CodeQL Binary](https://github.com/github/codeql-cli-binaries/releases) for your system
+ - Add the unzipped "codeql" folder from the above step to your PATH environment variable
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+## Set up the CodeQL submodule
+Run the following commands to retrieve the codeql submodule that contains the libraries/queries from the github codeql repository:
 
-## Contributing
+```
+cd CodeQL-101
+git submodule init
+git submodule update
+```
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
+## Using a CodeQL Database
+In VSCode, add the "sample_project_db.zip" from the databases folder. Be sure to use "Select Database from Archive" instead of "Select Database from Folder". 
 
-When you submit a pull request, a CLA bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
+# Using this Workshop
+This repository contains starter query files and docs for learning to work with the CodeQL tool.
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+If you're following along outside of the workshop, start with the README files in each part in the queries/csharp folder. Please do these in order, as some of the exercises build on ones from previous sections. 
 
-## Trademarks
+Solutions to these exercises are available in the solutions folder, but please first try them on your own. Keep in mind that there are multiple ways to write a query - each of the solutions is only one way to solve the exercises. 
 
-This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft 
-trademarks or logos is subject to and must follow 
-[Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
-Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
-Any use of third-party trademarks or logos are subject to those third-party's policies.
+# Useful Resources
+ - [Github documentation for CodeQL](https://codeql.github.com/)
+ - [QL Language Reference](https://codeql.github.com/docs/ql-language-reference/)
