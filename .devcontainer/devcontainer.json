@@ -1,0 +1,13 @@
+{
+    "postCreateCommand": "git submodule init && git submodule update",
+    "hostRequirements": {
+      "memory": "16gb"
+    },
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "github.vscode-codeql"
+        ]
+      }
+    }
+  }
